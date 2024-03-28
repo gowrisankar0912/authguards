@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Component } from '@angular/core';
 import { CanActivate, CanActivateChild, CanDeactivate } from '@angular/router';
 import { AddproductComponent } from '../Components/products/addproduct/addproduct.component';
 import { AuthGuard } from './auth-service';
