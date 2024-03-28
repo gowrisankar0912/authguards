@@ -1,0 +1,47 @@
+<div>
+    <form [formGroup]="productDetails" (ngSubmit)="onSubmit()">
+      <table class="table">
+        <tr>
+          <td><label for="id">Id</label></td>
+          <td>
+            <input type="number" id="id" name="id" formControlName="id" />
+          </td>
+        </tr>
+  
+        <tr>
+          <td><label for="name">Name</label></td>
+          <td>
+            <input type="text" id="name" name="name" formControlName="name" />
+          </td>
+        </tr>
+  
+        <tr>
+          <td><label for="price">Price</label></td>
+          <td>
+            <input
+              type="number"
+              id="price"
+              name="price"
+              formControlName="price"
+            />
+          </td>
+        </tr>
+  
+        <tr>
+          <td colspan="2" style="padding-left: 80px;">
+            <button type="submit" [disabled]="!productDetails.valid">
+              Submit
+            </button>
+            <button
+              style="margin-left: 10px;"
+              type="button"
+              (click)="resetform()"
+            >
+              Reset
+            </button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+  
