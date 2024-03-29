@@ -1,0 +1,14 @@
+<button (click)="get()">Get Login</button>
+<button (click)="post()">CheckLogin</button>
+<button (click)="insertlogin()">Post Login</button>
+<div *ngFor="let x of this.prodService.logindata">
+  {{x | json}}
+</div>
+
+
+<button (click)="getproducts()">Get Products</button>
+<button (click)="postproducts()">Add Product</button>
+<button (click)="deleteproducts()">Delete Product</button>
+<div *ngFor="let x of this.prodService.productdata">
+  {{x | json}}
+</div>

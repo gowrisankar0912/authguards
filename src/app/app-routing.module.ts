@@ -8,6 +8,7 @@ import { PagenotfoundComponent } from './Components/pagenotfound/pagenotfound.co
 import { ProductdetailsComponent } from './Components/products/productdetails/productdetails.component';
 import { Guards } from './Service/guards';
 import { BrandsComponent } from './Components/products/brands/brands.component';
+import { ApiComponent } from './Components/api/api.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -36,6 +37,7 @@ const routes: Routes = [
     component: ProductdetailsComponent,
     canActivate: [Guards],
   },
+  { path: 'api', component: ApiComponent },
   { path: '**', component: PagenotfoundComponent },
 ];
 

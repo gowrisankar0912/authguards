@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthGuard } from '../../Service/auth-service';
+import { ProductService } from '../../Service/product.service';
+import { Login } from '../../Domain/login';
 
 @Component({
   selector: 'app-login',
@@ -12,8 +14,6 @@ export class LoginComponent {
   password!: string;
   retUrl: string = 'home';
   constructor(public authService: AuthGuard) {}
-
-  ngOnInit() {}
 
   onFormSubmit(loginForm: any) {
     this.username = loginForm.value.username;

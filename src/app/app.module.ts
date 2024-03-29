@@ -12,6 +12,8 @@ import { GetproductsComponent } from './Components/products/getproducts/getprodu
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductdetailsComponent } from './Components/products/productdetails/productdetails.component';
 import { BrandsComponent } from './Components/products/brands/brands.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiComponent } from './Components/api/api.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,15 @@ import { BrandsComponent } from './Components/products/brands/brands.component';
     GetproductsComponent,
     ProductdetailsComponent,
     BrandsComponent,
+    ApiComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

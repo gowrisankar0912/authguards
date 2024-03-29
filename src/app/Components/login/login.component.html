@@ -1,5 +1,6 @@
 <div id="login" *ngIf="this.authService.isloggedin() == false">
-    <h3 class="text-center text-white pt-5">Login form</h3>
+  
+    <h3 class="text-center text-white pt-5"></h3>
     <div class="container">
       <div id="login-row" class="row justify-content-center align-items-center">
         <div id="login-column" class="col-md-6">
@@ -19,7 +20,7 @@
                   name="username"
                   id="username"
                   class="form-control"
-                  ngModel
+                  [(ngModel)] = 'username'
                 />
               </div>
               <div class="form-group">
@@ -29,7 +30,7 @@
                   name="password"
                   id="password"
                   class="form-control"
-                  ngModel
+                  [(ngModel)] = 'password'
                 />
               </div>
               <div class="form-group">
@@ -48,3 +49,5 @@
     </div>
   </div>
   <h3 class="temp" *ngIf="this.authService.isloggedin()">Already logged in!!!!!</h3>
+
+
